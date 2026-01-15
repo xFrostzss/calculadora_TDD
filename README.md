@@ -1,4 +1,4 @@
-# 🧮 Calculadora TDD - Engenharia de Software III
+# Calculadora TDD - Engenharia de Software III
 
 > Projeto prático para demonstração da metodologia **Test Driven Development (TDD)** com automação do ciclo Red-Green-Refactor.
 
@@ -6,13 +6,13 @@
 ![Pytest](https://img.shields.io/badge/Pytest-8.0+-green?style=for-the-badge&logo=pytest)
 ![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido como requisito avaliativo da disciplina de **Engenharia de Software III** no **Instituto Federal do Piauí (IFPI)**.
 
 O objetivo principal não é apenas criar uma calculadora, mas demonstrar na prática a aplicação rigorosa do ciclo **TDD**. Para isso, desenvolvemos um **Orquestrador de Testes** (`tdd_runner.py`) que simula a evolução do código em tempo real, alternando entre as versões do software enquanto executa a bateria de testes automatizados.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 O módulo `CalculadoraService` implementa:
 * ➕ Soma
@@ -22,14 +22,14 @@ O módulo `CalculadoraService` implementa:
 * 🔢 Verificação de paridade (`isPar`)
 * ✅ Validação de números positivos
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Python 3.13+**
 * **Pytest**: Framework para execução dos testes unitários.
 * **Rich**: Biblioteca para criar a interface visual interativa no terminal.
 * **Shutil/OS**: Para manipulação de arquivos e orquestração das versões.
 
-## 📂 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 A arquitetura foi pensada para permitir a troca dinâmica de versões durante a apresentação:
 
