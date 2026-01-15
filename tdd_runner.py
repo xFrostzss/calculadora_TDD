@@ -7,6 +7,7 @@ from rich.panel import Panel
 from rich.text import Text
 from rich.rule import Rule
 from rich.align import Align
+import shutil
 
 console = Console()
 
@@ -70,9 +71,28 @@ def fail(msg):
 # ======================================================
 # FUNÇÕES TÉCNICAS
 # ======================================================
+# PARA LINUX
+# def clean_cache():
+#     for cache in BASE_DIR.rglob("__pycache__"):
+#         subprocess.run(["rm", "-rf", str(cache)], stdout=subprocess.DEVNULL)
+
+# PARA WINDOWS
+# ======================================================
+# FUNÇÃO TÉCNICA (SÓ PARA SEU WINDOWS)
+# ======================================================
 def clean_cache():
+    # 1. Procura e deleta todas as pastas __pycache__ dentro do projeto
     for cache in BASE_DIR.rglob("__pycache__"):
-        subprocess.run(["rm", "-rf", str(cache)], stdout=subprocess.DEVNULL)
+        try:
+            shutil.rmtree(cache, ignore_errors=True)
+        except:
+            pass
+            
+    # 2. Deleta a pasta .pytest_cache que fica na raiz
+    try:
+        shutil.rmtree(BASE_DIR / ".pytest_cache", ignore_errors=True)
+    except:
+        pass
 
 
 def apply_version(stage: str):
